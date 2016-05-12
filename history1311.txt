@@ -1,0 +1,500 @@
+  288  git status
+  289  git commit . -m 'first commit'
+  290  git status
+  291  ls -a
+  292  vi index.dat 
+  293  git commit -am 'second commit'
+  294  git status
+  295  vi index.dat 
+  296  git commit -am 'third commit'
+  297  git status
+  298  git one
+  299  vi index.dat 
+  300  git commit -am 'fourth commit'
+  301  git status
+  302  git one
+  303  vi index.dat 
+  304  git commit -am 'fifth commit'
+  305  git status
+  306  git one
+  307  git rest --hard 95c8b2c
+  308  git reset --hard 95c8b2c
+  309  git status
+  310  vi index.dat 
+  311  touch abc.txt
+  312  git status
+  313  git reset --hard 95c8b2c
+  314  git status
+  315  git add abc.txt
+  316  git commit -m 'abc first commit'
+  317  git status
+  318  vi index.dat 
+  319  git status
+  320  git commit -am 'fourth commit'
+  321  git one
+  322  git reset --hard 95c8b2c
+  323  git status
+  324  git one
+  325  vi index.dat 
+  326  git commit  -am 'fourth commit'
+  327  touch abc.txt
+  328  git status
+  329  git rest --soft 95c8b2c
+  330  git resrt --soft 95c8b2c
+  331  git reset --soft 95c8b2c
+  332  git status
+  333  git commit . -m 'new change'
+  334  git status
+  335  git add abc.txt 
+  336  git one
+  337  git reset --soft f590be6
+  338  git status
+  339  git commit . -m 'soft reset'
+  340  git status
+  341  git one
+  342  vi index.dat 
+  343  git reset --mixed mode f590be6
+  344  git reset --mixedmode f590be6
+  345  git reset --mixed f590be6
+  346  vi index.dat 
+  347  git commit -am 'mixed reset'
+  348  git status
+  349  git one
+  350  ls -a
+  351  git commit . -m 'new file added'
+  352  git add abc.txt 
+  353  git commit . -m 'new file added'
+  354  git status
+  355  git branch
+  356  clear
+  357  git branch
+  358  git branch branch1
+  359  git branch
+  360  git checkout branch1
+  361  pwd
+  362  touch 123.txt
+  363  vi 123.txt
+  364  git add 123.txt 
+  365  git commit . -m 'first file added to branch'
+  366  git status
+  367  git checkout master
+  368  git checkout branch1
+  369  git checkout master
+  370  git merge branch1
+  371  git checkout -b branch2
+  372  touch view2.txt
+  373  vi view2.txt 
+  374  git add view2.txt 
+  375  git commit view2.txt -m 'branch 2 first file added'
+  376  git status
+  377  git one
+  378  git checkout branch1
+  379  ls -a
+  380  git branch 
+  381  git checkout master
+  382  git branch --merged master
+  383  history
+  384  history >> history_1436.txt
+  385  pwd
+  386  ls -a
+  387  cat history_1436.txt 
+  388  git checkout branch2
+  389  git status
+  390  git checkout master
+  391  git status
+  392  git stash
+  393  git add history_1436.txt 
+  394  git branch
+  395  git stash 
+  396  ls -a
+  397  git status
+  398  git checkout branch2
+  399  ls -a
+  400  git checkout master 
+  401  git stash apply
+  402  ls -a
+  403  git checkout branch2
+  404  ls -a
+  405  git branch
+  406  git branch -b branch3
+  407  git checkout -b branch3
+  408  touch b3newfile.txt
+  409  vi b3newfile.txt 
+  410  git add b3newfile.txt 
+  411  git commit -m 'branch 3 new file added'
+  412  git status
+  413  ls -a
+  414  git checkout master
+  415  ls -a
+  416  git merge branch3
+  417  touch masterfile.dat
+  418  vi masterfile.dat 
+  419  git add masterfile.dat 
+  420  git commit -m 'masterfile.dat is added'
+  421  git checkout branch3
+  422  touch branch3file.dat
+  423  vi branch3file.dat 
+  424  git add branch3file.dat 
+  425  git commit -m 'branch3file.dat is added'
+  426  git checkout master 
+  427  touch master2file.dat
+  428  git add master2file.dat 
+  429  git commit -m 'master2file.dat is added'
+  430  git merge branch3
+  431  git one
+  432  ls -a
+  433  git checkout branch3
+  434  ls -a
+  435  vi abc.txt 
+  436  git add abc.txt 
+  437  git commit  -m 'branch3 abc.txt is modified'
+  438  git one
+  439  git status
+  440  git checkout master
+  441  la -a
+  442  ls -a
+  443  vi abc.txt 
+  444  git add abc.txt 
+  445  git commit -m 'master branch abc.txt file updated'
+  446  git status
+  447  git one
+  448  git merge branch3
+  449  vi abc.txt 
+  450  git add abc.txt 
+  451  git commit -m 'conflict resolved manually'
+  452  git one
+  453  ls -a
+  454  history >> history_1529.txt
+  455  cat history_1529.txt 
+  456  git branch
+  457  vi abc.txt 
+  458  git add abc.txt 
+  459  git commit -m 'abc.txt modified 15th line in master branch'
+  460  git status
+  461  git checkout branch3
+  462  vi abc.txt 
+  463  git add abc.txt 
+  464  git commit -m 'abc.txt is modified in branch3 branch'
+  465  git checkout master 
+  466  git merge branch3
+  467  vi abc.txt 
+  468  git status
+  469  git add abc.txt 
+  470  git commit -m 'manually resolved the conflict'
+  471  vi abc.txt
+  472  git add abc.txt 
+  473  git commit -m 'added new line in abc.txt using master branch'
+  474  git checkout branch3
+  475  vi abc.txt 
+  476  git add abc.txt 
+  477  git commit -m 'added new line in abc.txt using branch3'
+  478  git checkout master
+  479  git merge branch3
+  480  vi abc.txt 
+  481  gitk
+  482  git branch --merged master
+  483  git checkout -b branch4
+  484  git branch --merged master
+  485  git checkout master
+  486  git branch --merged master
+  487  gitk
+  488  git checkout branch3
+  489  git checkout -b branch5
+  490  gitk
+  491  touch branch5file.dat
+  492  vi branch5file.dat 
+  493  git add branch5file.dat 
+  494  git commit -m 'branch5file.dat is added'
+  495  git status
+  496  git checkout master
+  497  git merge branch5
+  498  git status
+  499  git logone
+  500  git one
+  501  gitk
+  502  git checkout branch4
+  503  git checkout -b branch6
+  504  vi branch6file.dat
+  505  git add branch6file.dat 
+  506  git commit -m 'branch6file.dat is added'
+  507  git one
+  508  gitk
+  509  git branch
+  510  git checkout branch4
+  511  git merge branch6
+  512  gitk
+  513  git branch
+  514  git checkout master
+  515  git one
+  516  gitk
+  517  git merge branch4
+  518  git status
+  519  gitk
+  520  git branch
+  521  vi abc.txt 
+  522  git add abc.txt 
+  523  git commit -m 'new lines added in abc.txt via master branch'
+  524  git checkout branch4
+  525  vi abc.txt 
+  526  git add abc.txt 
+  527  git commit -m 'added 2 lines using branch4'
+  528  git checkout master
+  529  git merge branch4
+  530  gitk
+  531  git status
+  532  vi abc.txt 
+  533  vi abc.txt 
+  534  git add abc.txt 
+  535  git commit -m 'resolved using gitk'
+  536  git branch --merged master
+  537  git checkout -b branch7
+  538  git branch
+  539  git branch --merged master
+  540  git branch --no-merged master
+  541  git checkout master
+  542  git branch --no-merged master
+  543  git branch -d branch7
+  544  git branch -d branch4
+  545  git checkout -b branch8
+  546  touch branch8file.txt
+  547  git add branch8file.txt 
+  548  git commit -m 'branch8 file added'
+  549  git status
+  550  ls -a
+  551  git checkout master
+  552  git branch --merged master
+  553  git branch --no-merged master
+  554  git branch -d branch8
+  555  git branch -D branch8
+  556  git checkout -b branch9
+  557  touch branch9.txt
+  558  vi branch9.txt
+  559  git add branch9.txt 
+  560  git commit -m 'branch9 file added'
+  561  git checkout master
+  562  touch master9.dat
+  563  vi master9.dat
+  564  git add master9.dat 
+  565  git commit -m 'master9 file added'
+  566  git one
+  567  git checkout branch9
+  568  git one
+  569  git rebase master
+  570  git one -2
+  571  history >> history_16:28.txt
+  572  git branch --nomerge -master
+  573  git branch --no-merged -master
+  574  git branch --no-merged master
+  575  git checkout -b branch10
+  576  vi branch10.txt
+  577  git checkout master
+  578  ls -a
+  579  vi 123.txt
+  580  git add 123.txt 
+  581  git commit -m '123.txt is modified after creating branch10'
+  582  git checkout branch10
+  583  vi 123.txt
+  584  git add 123.txt
+  585  git commit -m '123.txt is modified in branch10'
+  586  git branch --no-merged master
+  587  git checkout master
+  588  git merge branch10
+  589  gitk
+  590  git status
+  591  git one
+  592  vi 123.txt
+  593  pwd
+  594  cd ..
+  595  owd
+  596  pwd
+  597  git init repo4
+  598  cd repo4
+  599  open index.dat
+  600  vi index.dat
+  601  git add index.dat 
+  602  git commit -m 'initial commit on master'
+  603  git checkout -b branch1
+  604  vi index.dat 
+  605  git add index.dat 
+  606  git commit -m 'initial commit in branch1'
+  607  git checkout master
+  608  vi index.dat 
+  609  git add index.dat 
+  610  git commit -m 'Second commit under master branch'
+  611  git status
+  612  git one
+  613  git checkout branch1
+  614  git rebase master
+  615  vi index.dat 
+  616  git status
+  617  git add index.dat 
+  618  git status
+  619  git rebase --continue
+  620  git one
+  621  pwd
+  622  git branch
+  623  history
+  624  go to 596
+  625  git one
+  626  git branch
+  627  git checkout -b branch2
+  628  git one
+  629  ls -a
+  630  vi newfile.dat
+  631  git add newfile.dat 
+  632  git commit -m 'one'
+  633  vi newfile.dat 
+  634  git add newfile.dat 
+  635  git commit -m 'two'
+  636  git status
+  637  vi newfile.dat 
+  638  git add newfile.dat 
+  639  git commit -m 'third'
+  640  git status
+  641  git one
+  642  vi newfile.dat 
+  643  git add newfile.dat 
+  644  git commit -m 'fourth'
+  645  git one
+  646  git status
+  647  git rebase -i ddf5abd
+  648  git one
+  649  vi weekdays.txt
+  650  git add weekdays.txt 
+  651  git commit -m 'monday'
+  652  vi weekdays.txt 
+  653  git commit -am 'tuesday'
+  654  vi weekdays.txt 
+  655  git commit -am 'wednesday'
+  656  git one
+  657  git status
+  658  git rebase -i 5be1937
+  659  git one
+  660  git revert --help
+  661  ls -a
+  662  vi newfile.dat 
+  663  git rebase -i 5be1937
+  664  git one
+  665  git checkout 93b7d64
+  666  vi weekdays.txt 
+  667  git checkout master
+  668  git branch
+  669  git checkout branch2
+  670  git one
+  671  vi months.dat
+  672  git add months.dat 
+  673  git commit -m 'jan'
+  674  git status
+  675  vi months.dat 
+  676  git commit -am 'feb'
+  677  git one
+  678  git rebase -i 429b3b3
+  679  git one
+  680  git checkout -b branch3
+  681  git branch
+  682  vi file1.dat
+  683  git add file1.dat 
+  684  git commit . -m 'file1 added'
+  685  vi file2.dat
+  686  git add file2.dat 
+  687  git commit -m 'file2 added'
+  688  git status
+  689  vi file3.dat
+  690  git add file3.dat 
+  691  git commit -m 'file3 added'
+  692  git one
+  693  git checkout master
+  694  git one
+  695  git cherry-pick 8b5959e
+  696  git one
+  697  git cherry-pick 5be1937  429b3b3
+  698  git status
+  699  gitk
+  700  git status
+  701  git add weekdays.txt 
+  702  git cherry-pick --continue
+  703  git one
+  704  git cherry-pick c1754aa
+  705  git one
+  706  git cherry-pick 82a1f26
+  707  git one
+  708  vi file10.txt
+  709  git commit --allow-empty
+  710  vi file10.txt 
+  711  git cherry-pick 4ac7e36 5311e38 
+  712  ls -a
+  713  git reset
+  714  git checkout master
+  715  ls -a
+  716  git cherry-pick 5311e38 c2f80cf 72a81b0 98f5806
+  717  git status
+  718  git checkout branch4
+  719  git status
+  720  git commit --allow-empty
+  721  git checkout branch2
+  722  ls -a
+  723  git cherry-pick 5311e38
+  724  git cherry-pick 4ac7e36 72a81b0
+  725  git cherry-pick --continue
+  726  git commit --allow-empty
+  727  ls -a
+  728  ls -a
+  729  git checkout master
+  730  ls -a
+  731  git branch
+  732  git checkout branch1
+  733  ls -a
+  734  vi patchone.dat
+  735  vi patch2.dat
+  736  git add .
+  737  git commit -am 'patch file added'
+  738  git one
+  739  ls -a
+  740  git format-patch HEAD~
+  741  ls -a
+  742  ls -a
+  743  pwd
+  744  cd ..
+  745  git init repo5
+  746  cd repo5
+  747  ls -a
+  748  git am *.patch
+  749  git am --continue
+  750  git status
+  751  rm 0001-first-commit.patch
+  752  rm 0001-patch-file-added.patch  0002-second-commit.patch
+  753  rm *.patch
+  754  git status
+  755  git am --continue
+  756  git am --skip
+  757  git am --abort
+  758  ls -a
+  759  git apply --patch
+  760  git am *.patch
+  761  ls -a
+  762  git one
+  763  history
+  764  pwd
+  765  cd ..
+  766  ls
+  767  pwd
+  768  rm index.dat 
+  769  ls -ltr
+  770  git clone https://github.com/balajikuppachi/githubrepo1.git
+  771  ls -a
+  772  cd githubrepo1/
+  773  ls -a
+  774  vi firstfile.dat
+  775  git add firstfile.dat 
+  776  git commit -m 'first commit'
+  777  git status
+  778  vi README.md 
+  779  git remote
+  780  git remote -v
+  781  git branch
+  782  git push origin master
+  783  git push origin master
+  784  git push origin master
+  785  pwd
+  786  history
+  787  history >> history13:11.txt
